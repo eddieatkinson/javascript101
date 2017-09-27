@@ -1,0 +1,60 @@
+<script type="text/javascript">
+	
+// Print stuff...
+// semi-colons are optional (like Python)
+// methods have the parentheses
+// alert("Hello, World");
+// EVERYTHING inside the browser...repeat EVERYTHING belongs to the window object.
+// window.alert("Hello, World") "window" is almost never necessary, as it is assumed
+
+// Use the console to print. We will use this ALL the time.
+// console.log("Hello, World");
+
+// Actually write to the window itself. The Document object is where all the HTML
+// is at
+// document.write("Hello, World");
+
+// VARIABLES
+// Same as every other language... a variable is a place to stash something (number, string,
+// 	array, object) that you could write yourself, but a var is faster.
+// Data-types available:
+// 1. Strings
+// 2. Numbers - JS has only the Number data type
+// 2a. float
+// 2b. integer
+// 3. Booleans
+// 4. Arrays
+// 5. Objects (Dictionary/Object)
+
+// JS are created dynamically, just like Python, BUT, they need to start with var when
+// first created.
+// -- use strict
+// var means I am declaring a variable in the current scope
+// - current scope might be:
+// 1. Widnow (global)
+// 2. function
+// 3. prototype method
+
+// You only use var one time. Once it's declared, you don't declare it again.
+
+// In Python I used snake-case.
+// In JS I use camelCase.
+var fullName = "Robert Bunch";
+console.log(fullName);
+fullName = "Hayes Capers";
+console.log(fullName);
+// Just like Python, you can escape anything with a \
+fullName = "Hayes \"Bender\" Capers";
+fullName = 'Hayes "Bender" Capers';
+var firstName = "Hayes";
+var nickName = "Bender";
+var lastName = "Capers";
+// Concatenate strings with +
+fullName = firstName + " " + nickName + " " + lastName;
+console.log(fullName);
+// template literals (ES6)
+fullName = `${firstName} "${nickName}" ${lastName}`;
+// fullName = '%s "%s" %s' % (a, b, c) in Python
+console.log(fullName);
+
+</script>
