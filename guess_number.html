@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var guess = Number(prompt("Pick a number between 1 and 10: "));
+	var randNum = Math.random();
+	var randOneAndTen = Math.ceil(randNum * 10);
+	var diff = guess - randOneAndTen;
+
+	if(isNaN(guess)){ // If it's true that the guess is Not A Number...
+		console.log("Please enter a number, silly.");
+	}else if(guess == randOneAndTen){
+		console.log("Congratulations! You are correct!");
+	}else if(2 >= diff && diff >= -2){
+		console.log(`You were close! The number was ${randOneAndTen}.`);
+	}else{
+		console.log(`Congratulations! Just kidding. You're wrong. The number was ${randOneAndTen}.`);
+	}
+
+
+</script>

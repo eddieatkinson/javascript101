@@ -1,0 +1,128 @@
+<script type="text/javascript">
+	
+	// var students = [];
+	// students = ["Jennifer", "Nicolas", "Zach"];
+	// // append = push
+	// students.push("Taylor");
+	// students.push("Hayes");
+
+	// // Every array has a length property that is always accessible.
+	// // This is the same as doing len(students)
+	// console.log(students.length);
+
+	// // Like Python and everyone else, the first index is 0.
+	// // Any data type can go in any index...
+	// // 1. String
+	// // 2. Array
+	// // 3. Object
+	// // 4. Boolean
+	// // 5. Number
+
+	// // Each index is separated by comma, the last one does not have one.
+	// var nfcSouth = [
+	// 	'Falcons',
+	// 	'Saints',
+	// 	'Bucs',
+	// 	'Panthers'
+	// ]
+
+	// console.log(nfcSouth[0]); // Falcons
+	// console.log(nfcSouth[6]); // undefined (Python would say "index out of bounds")
+	// console.log(nfcSouth[-1]); // undefined (Python will grab from end, JS requires you to use length)
+
+	// nfcSouth.push('Cowboys');
+	// // To remove the last element in an array, .pop()
+	// // .pop() returns the element removed
+	// // .pop() MUTATES the array!
+	// console.log(nfcSouth.pop());
+
+	// var atlantaTeams = [
+	// 	'Thrashers',
+	// 	'Falcons',
+	// 	'Hawks',
+	// 	'Bravos'
+	// ]
+
+	// .shift() will remove and return the first element in the array.
+	// console.log(atlantaTeams.shift());
+
+	// // slice is like list[2:5] in Python....gets a copy, does NOT change the original
+	// // and you can tell it x and y, where to start and where to finish (non-inclusive)
+
+	// console.log(atlantaTeams.slice(1,2));
+
+	// atlantaTeams2 = atlantaTeams;
+	// console.log(atlantaTeams2);
+	// atlantaTeams2.pop();
+	// console.log(atlantaTeams2);
+	// console.log(atlantaTeams); // This will return the shortened array as well, because atlantaTeams 2
+	// points to the same array as atlantaTeams. Would need to slice to make the new array, instead of 
+	// line 54, or Objects.assign()
+
+	// Splice
+	// Splice will allow you to add and remove elements from any index.
+	// Splice args:
+	// 1. Where to start (just like slice)
+	// 2. How many to delete
+	// 3. What to insert(can have multiple)
+
+	// atlantaTeams.shift(); // remove Thrashers
+	// console.log(atlantaTeams);
+	// atlantaTeams.splice(0,1,"ATL United"); // removes Thrashers and adds ATL United
+	// console.log(atlantaTeams);
+
+	// // If not deleting, you still must include 0
+	// atlantaTeams.splice(0,0,"Silverbacks");
+
+	// If not adding...the 3rd is not necessary
+	// atlantaTeams.splice(3,1); // would use .shift() here
+	// console.log(atlantaTeams);
+
+	// Splice changes the array
+	// Slice just copies it
+
+	// While loops
+	// numberGuessed = false;
+	// while(!numberGuessed){
+	// 	var userGuess = prompt("Guess a number: ");
+	// 	if (userGuess == 2){
+	// 		numberGuessed = true;
+	// 	}
+	// }
+
+	// For loops
+	// 1st arg: iterator
+	// 2nd arg: condition to keep running
+	// 3rd arg: step at the end of the loop
+	// for(var i = 0; i < 100; i++){
+	// 	console.log(i);
+	// }
+
+	// "let" is an ES6 concept. It will make a variable that lasts from { to }
+	// "let" is a block-level variable.
+
+
+	// A string is a fancy array
+	// An array is a fancy object
+	var name = "Jong";
+	for(let i = 0; i < name.length; i++){
+		console.log(name[i]);
+	}
+
+	// A def in Python is a function in JS.
+	// Instead of :: we use { }.
+
+	function sayHello(){
+		console.log("Hello");
+	}
+
+	sayHello();
+
+	function sayHello1(name, b = "Bunch"){
+		console.log(name);
+		console.log(b);
+	}
+
+	sayHello1("Robert");
+
+</script>
