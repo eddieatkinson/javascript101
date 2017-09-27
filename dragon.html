@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fight the horrible dragon!</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		function rollDice(){
+			// console.log("User pressed the roll button")
+			// get a random number between 1 and 6
+			var rand1 = Math.ceil(Math.random() * 6);
+			var rand2 = Math.ceil(Math.random() * 6);
+
+			// The dice images are dN.gif. We have 2 random numbers for that N.
+			// Use JS to update the DOM, so that the image files that show will
+			// be the same number as the random numbers above
+			var dice = document.getElementById('dice');
+			console.log(dice);
+			var image1 = dice.children[0];
+			var image2 = dice.children[1];
+			image1.src = `dragon-assets/d${rand1}.gif`;
+			image2.src = `dragon-assets/d${rand2}.gif`;
+
+			if(rand1 + rand2 > 8){
+				document.getElementById('dragon').children[0].src = "http://media.istockphoto.com/photos/grey-squirrel-yawning-picture-id473012660?k=6&m=473012660&s=612x612&w=0&h=opzkOsCuudeI_l83My-WdfTiru2mpuwZMpVomymwC9c=";
+				document.getElementById('dragon').children[0].style.height = "500px";
+				document.getElementById('dragon').children[0].style.width = "600px";
+				document.getElementById('message').innerHTML = "You have defeated the dragon!";
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<div id="game-wrapper">
+		<div id="dragon">
+			<img src="./dragon-assets/dragon.png" />	
+		</div>
+		<div id="message">
+			You have encountered the great and terrible green dragon. Roll to fight!
+			You must roll an 8 or higher to defeat it.
+		</div>
+		<div id="dice">
+			<img src="./dragon-assets/d1.gif" />
+			<img src="./dragon-assets/d1.gif" />
+		</div>
+		<div id="roll">
+			<button onclick="rollDice();">Fight!</button>
+		</div>
+	</div>
+
+
+</body>
+</html>

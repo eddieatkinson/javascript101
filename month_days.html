@@ -1,0 +1,20 @@
+<script type="text/javascript">
+	var monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	var userNum = prompt("Give me a number between 1 and 12 (for your favorite month): ");
+	var arrayIndex = userNum - 1;
+	var userYear = prompt("Give me a great year! ");
+	var daysInMonth;
+	if(userNum == 2){
+		if(userYear % 4 != 0 && userYear % 400 != 0){
+			daysInMonth = 28;
+		}else{
+			daysInMonth = 29;
+		}
+	}else if(userNum == 4 || userNum == 6 || userNum == 9 || userNum == 11){
+		daysInMonth = 30;
+	}else{
+		daysInMonth = 31;
+	}
+	alert(`${monthsOfYear[arrayIndex]} in the year ${userYear} had, or will have, ${daysInMonth} days!`)
+	
+</script>

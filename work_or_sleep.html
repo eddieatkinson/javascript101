@@ -1,0 +1,13 @@
+<script type="text/javascript">
+	
+	var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	var userNum = prompt("Give me a number between 0 and 6: ");
+	if(userNum == 0 || userNum == 6){
+		alert(`Sleep in! It's ${daysOfWeek[userNum]}!`);
+	}else if(userNum > 0 && userNum < 6){
+		alert(`Get up! It's ${daysOfWeek[userNum]}!`);
+	}else{
+		alert('Pick a better number!')
+	}
+
+</script>

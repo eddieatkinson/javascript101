@@ -1,0 +1,16 @@
+<script type="text/javascript">
+	var billBeforeTip = Number(prompt("How much was your meal? "));
+	var levelOfService = prompt("How would you rate your level of service (good, fair, or bad)? ");
+	var tipPercent;
+	if(levelOfService == "good"){
+		tipPercent = .2;
+	}else if(levelOfService == "fair"){
+		tipPercent = .15;
+	}else{
+		tipPercent = .1;
+	}
+
+	var tipAmount = tipPercent * billBeforeTip;
+	var totalBill = billBeforeTip + tipAmount;
+	alert(`Your total bill was $${totalBill}!`);
+</script>
