@@ -1,0 +1,51 @@
+<script type="text/javascript">
+	
+	// Functions are just blocks of code that can be called or used whenever you please.
+	// 1. They are first class objects...you can do anything to a function you can do to any other object.
+	// 2. They have their own scope. I.e., it is a child of whoever it is inside of.
+	// 	Children can see their parents' stuff and can override their parents' stuff.
+	// 3. Like all other variables, if it's not inside of something it belongs to the global scope, or window.
+	// 4. They can return a single value (can be an object, array).
+
+	// function getRand(low, high){
+	// 	var rand = Math.ceil(Math.random() * (high - low)) + low;
+	// 	return rand;
+	// }
+
+	// // function isPrime(n, knownPrimes){
+	// // 	for(let n =...)
+	// // }
+
+	// var parentFunc(func){
+	// 	func();
+	// }
+
+	// var callMe = function(){
+	// 	console.log("Call me!");
+	// }
+
+	// var a = callMe;
+	// a();
+	// parentFunc(callMe);
+
+
+	// console.log(getRand(9, 13));
+
+	function isLarge(n){
+		if(n > 100){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
+	userNumber = prompt("Enter a number: ")
+
+	if(isLarge(userNumber)){
+		console.log("Large!");
+	}else{
+		console.log("Small!")
+	}
+
+</script>

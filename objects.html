@@ -1,0 +1,89 @@
+<script type="text/javascript">
+	// An array is []
+	// This is an empty array.
+	// var students = [];
+
+	// An object is {}
+	// This is an empty object.
+	var student = {};
+
+	// Just like dictionaries, objects are a combination of properties and values (keys
+	// 	and values).
+	// syntax is:
+	// {
+	// 	property: value
+	// }
+
+	student.name = "Hayes"; // NOT student['name'] = "Hayes";
+	console.log(student);
+
+	// Unlike Python, the property doesn't have to have quotes around it
+	// student = {
+	// 	name = "Hayes"
+	// }
+
+	student.age = 28;
+	// console.log(student);
+
+	// Separte with ,
+	var student2 = {
+		name: "Jennifer",
+		profession: "Student",
+		language: "JavaScript"
+	}
+
+	// console.log(student2.language);
+
+	var student3 = {
+		name: "Akil",
+		friends: [
+			"Amir",
+			"Binh",
+			"Jong"
+		]
+	}
+
+	var student4 = {
+		name: "Valerie",
+		friends: [],
+		sayHello: function(name){
+			console.log(`Hello, ${name}`)
+		},
+		addFriend: function(newFriendName){
+			this.friends.push(newFriendName)
+		}
+	}
+
+	// console.log(student4.name);
+	// student4.sayHello("Eddie");
+
+	// student4.addFriend("Michael");
+	// console.log(student4.friends);
+
+	// console.log(student4.sayHello); // This will return the code, but will NOT run the code, because there are no ().
+	// console.log(student4.sayHello());
+	// console.log(student4);
+
+	// // BRACKET NOTATION
+	// // If you need a variable property, you MUST use bracket notation.
+	// var userProp = prompt("What property would you like?", name);
+	// console.log(student4.userProp); // will return undefined, because it's looking for the property "userProp"
+	// console.log(student4[userProp]);
+
+	students = [
+		student,
+		student2,
+		student3,
+		student4
+	];
+
+	console.log(students[2].name);
+	console.log(students[2].friends[2]);
+	students[3].sayHello("Michael");
+
+	// If you reference a property that does not exist, you just get "undefined". In Python,
+	// you get a reference error.
+	// Similarly, if you reference an index that doesn't exist, you just get "undefined". Again, in 
+	// Python, you would get an error.
+
+</script>
