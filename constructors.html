@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Constructors</title>
+
+	<script type="text/javascript">
+		// A constructor is a factory to make JavaScript objects.
+		// It is just a function that takes arguments and uses the JS keyword "this" to make the same thing over and over and over...
+
+		// The function name is capitalized to indicate it is a constructor.
+		// this = concept of "context"
+		// this in JS is the object (function or a constructor) that you are 
+		// currently inside of. It is the equivalent of Python's "self".
+		function Player(name, position, amp, ap, ar, starter){
+			this.name = name;
+			// console.log(2 + 2)
+			this.position = position;
+			this.avgMinutesPlayed = amp;
+			this.avgPoints = ap;
+			this.avgRebounds = ar;
+			this.starter = starter;
+			// this.species = 'Human'; 
+			
+			// this.reportPPM = function(){
+			// 	var ppm = this.avgPoints / this.avgMinutesPlayed;
+			// 	ppm = Math.round(ppm * 100) / 100;
+			// 	return ppm;
+			// }
+		}
+
+		// Make the species property a shared property.
+		Player.prototype.species = "Human";
+		// Same thing with the function:
+		Player.prototype.reportPPM = function(){
+				var ppm = this.avgPoints / this.avgMinutesPlayed;
+				ppm = Math.round(ppm * 100) / 100;
+				return ppm;
+			}
+
+		// When you instantiate an object from a constructor function, you use the keyword "new".
+		var player1 = new Player('Kent Bazemore', 'SF', 31.8, 12, 6.6, true);
+		var player2 = new Player('Kyle Korver', 'SG', 32.4, 11.2, 4.9, true);
+
+		console.log(player1);
+		console.log(player1.reportPPM());
+
+		player1.species = "Robot";
+		// console.log(player1);
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
