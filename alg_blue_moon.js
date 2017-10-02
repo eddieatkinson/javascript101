@@ -4,9 +4,9 @@
 // 	}
 // }
 var year = 2000;
-var newNum = 1;
+var newNum = 21;
 var i =0;
-var cycle = 29.5;
+var cycle = 29.53;
 var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 var blueMoon = 0;
 // newNum += cycle;

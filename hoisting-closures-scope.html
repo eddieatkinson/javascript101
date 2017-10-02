@@ -1,0 +1,92 @@
+<script type="text/javascript">
+	
+	// -----Scope-----
+	// - Determines what can see a variable.
+	// - GLOBAL
+	// 	- If everyone can see it, it's global.
+	// 	- If it belongs to the window, or is defined outside of all functions, inside
+	// 		of a script tag, it is global and everyone can see and change it anytime they
+	// 		want to.
+	// 	- In Python, globals are variables all the way to the left.
+	// - LOCAL
+	// 	- Local variables occur inside of functions and are visible or changeable only
+	// 		inside that function and child functions
+
+	// This is a global variable. It belongs to...WINDOW!!
+	// var iAmAGlobal = 1;
+	// var iAmAlsoAGlobal = 10;
+	// console.log(iAmAGlobal);
+	// console.log(window.iAmAGlobal);
+
+	// function checkScope(){
+	// 	// In spite of the hoorible name, this is NOT a global variable.
+	// 	// It is not part of the window. NOBODY outside of the function can see
+	// 	// or change or use it.
+	// 	var iAmAGlobal = 2;
+	// 	console.log(iAmAGlobal); // 2, local
+	// 	console.log(window.iAmAGlobal); // 1, global
+	// 	var iAmALocal = 3;
+	// 	console.log(iAmALocal); // 3, local
+
+	// 	// DON'T, unless you have a VERY good reason to, EVER name a variable inside a fucnrion
+	// 	// that you have used globally. IT WILL BE CONFUSING.
+
+	// 	// There is no local (inside this function) variable called iAmAlsoAGlobal, so it will 
+	// 	// look UP... to the parent.
+	// 	console.log(iAmAlsoAGlobal);
+	// }
+
+	// checkScope();
+	// console.log(iAmALocal); // Error - NOT DEFINED, because we're looking for a variable that doesn't exist
+	// console.log(window.iAmALocal); // no error, just undefined, because we're looking for a property of window
+
+	// var a = 1;
+
+	// // REMEMBER, funcitions are regular objects (1st order objects) in JS, which means they can 
+	// // be assigned, declared, etc., just like anuthing else. They are global and local, just like any var.
+	// function child(){
+	// 	console.log(a);
+	// 	a++;
+	// 	console.log(a);
+	// 	for (i = 0; i < 10; i++){
+	// 		a++;
+	// 	}
+	// 	function grandChild(){ // same as "var grandchild = function()..."
+	// 		console.log("I am.a grandchild!");
+	// 	}
+	// }
+
+	// child();
+	// console.log(a); // 12, the function changed the global variable.
+	// grandChild(); // RED - NOT DEFINED. It is a local variable within child.
+	
+	// -----Hoisting-----
+	// Anythime you have a function, JavaScript will take any var and put it at the top,
+	// 	whether you want it to or not.
+
+	var q = 1;
+	function p(){
+		console.log(q); // undefined, because it puts "var q;" at the top of the function
+		// JS sees "var q = 2" as:
+		// var q;
+		// q = 2;
+		var q = 2;
+		console.log(q);
+	}
+	p();
+	
+	// We can avoid this confusion by always declaring variables at the top of functions.
+	// JS runs from left to right, top to bottom.
+	// If it sees a function on run, it doesn't run the function, it does register it as a 
+	// variable/function. It will hoist all variables inside the function to the top.
+	// REMEMBER, functions are treated like variables and are hoisted as well.
+
+	j();
+	function j(){
+		console.log("Usually you have to wait 9 months.");
+	}
+
+
+	// -----Closures-----
+
+</script>
